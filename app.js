@@ -97,14 +97,14 @@ app.use("/listings/:id/reviews", reviewsRouter)
 app.use("/", userRouter);
 
 
-app.use((req, res, next) => {
-     res.status(404).render('error', {
-        message: 'Page not found',
-        error: {
-           status: 404
-        }
-      });
-    });
+// app.use((req, res, next) => {
+//      res.status(404).render('error', {
+//         message: 'Page not found',
+//         error: {
+//            status: 404
+//         }
+//       });
+//     });
     
     // Global error handling middleware
       app.use((err, req, res, next) => {
