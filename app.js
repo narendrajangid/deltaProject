@@ -97,22 +97,22 @@ app.use("/listings/:id/reviews", reviewsRouter)
 app.use("/", userRouter);
 
 
-// app.use((req, res, next) => {
-//      res.status(404).render('error', {
-//         message: 'Page not found',
-//         error: {
-//            status: 404
-//         }
-//       });
-//     });
+// // app.use((req, res, next) => {
+// //      res.status(404).render('error', {
+// //         message: 'Page not found',
+// //         error: {
+// //            status: 404
+// //         }
+// //       });
+// //     });
     
-    // Global error handling middleware
-      app.use((err, req, res, next) => {
-        let { statusCode = 500, message = "Something went wrong" } = err;
-        res.status(statusCode).render("error.ejs", { message });
-        console.log(status);
-        next()
-    });
+//     // Global error handling middleware
+//       app.use((err, req, res, next) => {
+//         let { statusCode = 500, message = "Something went wrong" } = err;
+//         res.status(statusCode).render("error.ejs", { message });
+//         console.log(status);
+//         next()
+//     });
 
 
 app.listen(8080, ()=>{
